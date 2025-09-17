@@ -1,9 +1,7 @@
+import cartImage from '../assets/cart-img.png';
+
 function CartWidget() {
-    return <span>
-        <a href="">
-            <img src="" alt="">0</img>
-        </a>
-    </span>
+    return cartImage
 }
 
 export default CartWidget;
