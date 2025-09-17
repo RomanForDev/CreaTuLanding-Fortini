@@ -8,6 +8,7 @@ function NavBar() {
             <h3>Sobre Nosotros</h3>
             <h3>Contactanos!</h3>
         </ul>
+        {/* Render del carrito con su número */}
         <CartWidget />
     </nav>
 }
