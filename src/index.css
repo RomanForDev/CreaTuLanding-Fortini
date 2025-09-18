@@ -43,17 +43,19 @@ nav {
 .navlist {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  gap: 2rem;
+  justify-content:baseline;
+  gap: 3rem;
+  /* border: 1px white solid; */
 }
 
 a {
-  padding: 1rem;
+  padding: 2em;
+  /* border: 1px white solid; */
 }
 
 .img-cart {
-  height: 40px;
-  width: 40px;
+  height: 2em;
+  width: 2em;
 }
 
 button {
