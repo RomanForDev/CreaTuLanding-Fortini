@@ -48,6 +48,10 @@ ul {
   gap: 2rem;
 }
 
+a {
+  padding: 1rem;
+}
+
 .img-cart {
   height: 40px;
   width: 40px;
