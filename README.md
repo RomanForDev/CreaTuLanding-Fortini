@@ -18,11 +18,11 @@ Formato
 Link al último commit de tu repositorio en GitHub. Debe tener el nombre “CreaTuLanding1+Apellido”, por ejemplo “CreaTuLanding+Fernandez”
 
 Pre-Entrega 2
-Instalar react-router (npm i react-router)
+Instalar react-router (npm i react-router) \*\*\*\*
 
-Configurar en el componente App la navegación con los componentes: BrowserRouter, Routes, Route
+Configurar en el componente App la navegación con los componentes: BrowserRouter, Routes, Route \*\*\*\*
 
-Genera links con el componente Link para poder navegar: tanto en NavBar como en Item (ver detalle)
+Genera links con el componente Link para poder navegar: tanto en NavBar como en Item (ver detalle) \*Falta en el Item\*\*\*
 
 Crear ItemDetailContainer, mostrando los detalles de un producto
 
