@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { getSingleProduct } from "../../mockApiService/mockApiService";
 import { useParams } from "react-router";
+import { Link } from 'react-router';
 
 function ItemDetail() {
     const [product, setProduct] = useState(null);
@@ -27,6 +28,7 @@ function ItemDetail() {
                     <h3 className="prod-name">{product.title}</h3>
                     <h4 className="prod-price">{product.price}</h4>
                     <p className="prod-description">{product.description}</p>
+                    <button><Link to="/products">Volver</Link></button>
                 </div>
             </div>
         </div>
