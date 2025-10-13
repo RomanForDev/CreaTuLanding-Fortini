@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import './App.css'
 import NavBar from './components/NavBar/NavBar.jsx'
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router';
 import MainRender from './components/MainPage/MainPage.jsx';
 import Contact from './components/Contact/Contact.jsx';
