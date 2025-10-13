@@ -1,26 +1,21 @@
-import { useState, useEffect } from "react";
-import getData from "../../mockApiService/mockApiService";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-function ItemCard( prop ) {
-    useEffect(()=> getData()
-    .then( (data) => {setProducts(data)}
-    ), [])
-    return <div className="products-list">
-                {prop.map( product => <>
-                <div key={product.id} className="card">
-                    <div className="card-img">
-                        <img src={product.image} alt=""/>
-                    </div>
-                <div className="card-body">
-                    <h3 className="prod-name" >{product.title}</h3>
-                    <h4 className="prod-price" >{product.price}</h4>
-                        <p className="prod-description">{product.description}</p>
-                        {/* <button><a href={`https://fakestoreapi.com/products/${prodId}`} target="_blank">Ver Más</a></button> */}
-                </div>
+function ItemCard({ product }) {
+    return (
+        <div className="card">
+            <div className="card-img">
+                <img src={product.image} alt={product.title} />
             </div>
-        </>)
-        }
+            <div className="card-body">
+                <h3 className="prod-name">{product.title}</h3>
+                <h4 className="prod-price">{product.price}</h4>
+                <Link to={`/detail/${product.id}`}>
+                    <button>Ver Más</button>
+                </Link>
+            </div>
         </div>
+    );
 }
 
 export default ItemCard;

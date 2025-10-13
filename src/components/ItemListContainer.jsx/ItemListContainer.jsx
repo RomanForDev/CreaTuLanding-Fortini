@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import ItemCard from "../ItemCard/ItemCard";
-import { Link } from 'react-router';
+import { Link, useParams } from 'react-router';
+import { getSingleProduct } from "../../mockApiService/mockApiService";
         
 function ItemListContainer(){
     const [productos, setProductos] = useState([]);
+    const [page, setPage] = useState(0);
+    const {id} = useParams()
 
     useEffect(() => async function callFetch() {
         const request = await fetch('https://fakestoreapi.com/products')
@@ -23,7 +26,7 @@ function ItemListContainer(){
                 <div key={product.id} className="card-body">
                     <h3 className="prod-name" >{product.title}</h3>
                     <h4 className="prod-price" >{product.price}</h4>
-                    <button><Link to="/detail" target="_blank"></Link>Ver Detalle</button>
+                    <Link to="/product/id"><button>Ver Detalle</button></Link>
                         {/* <p className="prod-description">{product.description}</p> */}
                         {/* <button><a href={`https://fakestoreapi.com/products/${prodId}`} target="_blank">Ver Más</a></button> */}
                 </div>

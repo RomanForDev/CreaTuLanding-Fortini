@@ -1,9 +1,27 @@
-// Contenedor en formato cards para los items
+import { useState, useEffect } from 'react';
+import { getData } from '../../mockApiService/mockApiService';
+import ItemCard from '../ItemCard/ItemCard';
 
-function ItemListContainer({greeting}) {
-    return <div>
-        <h1>{greeting}</h1>
+function ItemListContainer() {
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        getData()
+            .then((data) => {
+                setProducts(data);
+            })
+            .catch((error) => {
+                console.error("Error fetching products: ", error);
+            });
+    }, []);
+
+    return (
+        <div className="item-list-container">
+            {products.map((product) => (
+                <ItemCard key={product.id} product={product} />
+            ))}
         </div>
+    );
 }
 
 export default ItemListContainer;
