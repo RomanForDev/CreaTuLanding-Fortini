@@ -10,9 +10,6 @@ function ItemListContainer() {
             .then((data) => {
                 setProducts(data);
             })
-            .catch((error) => {
-                console.error("Error fetching products: ", error);
-            });
     }, []);
 
     return (

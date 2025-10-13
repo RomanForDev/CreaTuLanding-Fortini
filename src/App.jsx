@@ -18,7 +18,7 @@ function App() {
         <Route path='/products' element={ <ItemListContainer /> }/>
         <Route path='/contact' element={ <Contact greeting={'Contactanos!'}/> }/>
         <Route path='/about' element={ <About greeting={'Acerca de nosotros:'} /> }/>
-        <Route path='/cart' element={ <MainRender /> }/>
+        <Route path='/' element={ <MainRender greeting={"Bienvenidos!"}/> }/>
         <Route path='/detail/:id' element={ <ItemDetail /> }/>
         <Route path='*' element={ <h2>404: No pudimos encontrar tu solicitud.</h2> }/>
     </Routes>

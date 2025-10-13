@@ -11,9 +11,6 @@ function ItemDetail() {
             .then((data) => {
                 setProduct(data);
             })
-            .catch((error) => {
-                console.error("Error fetching product: ", error);
-            });
     }, [id])
 
     if (!product) {
