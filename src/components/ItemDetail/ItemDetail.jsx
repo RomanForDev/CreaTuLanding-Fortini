@@ -20,14 +20,14 @@ function ItemDetail() {
 
     return (
         <div className="product-detail">
-            <div className="card">
-                <div className="card-img">
+            <div className="card-detail">
+                <div className="card-img-detail">
                     <img src={product.image} alt={product.title} />
                 </div>
-                <div className="card-body">
-                    <h3 className="prod-name">{product.title}</h3>
-                    <h4 className="prod-price">{product.price}</h4>
-                    <p className="prod-description">{product.description}</p>
+                <div className="card-body-detail">
+                    <h3 className="prod-name-detail">{product.title}</h3>
+                    <h4 className="prod-price-detail">${product.price}</h4>
+                    <p className="prod-description-detail">{product.description}</p>
                     <button><Link to="/products">Volver</Link></button>
                 </div>
             </div>

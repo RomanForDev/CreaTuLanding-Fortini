@@ -30,6 +30,6 @@ Crear Item, que representa la Card de cada producto dentro del listado /_/_/\*/
 
 En ItemDetailContainer, leer la URL con useParams(), obtener el ID y buscar un unico producto con ese ID /_/_/_/_/
 
-EN ItemListContainer, leer la URL con useParams(), obtener la cteogria y buscar un listado de productos segun esa categoria /_/_/_/_/
+EN ItemListContainer, leer la URL con useParams(), obtener la cteogria y buscar un listado de productos segun esa categoria
 
 IMPORTANTE: Tanto ItemDetail como ItemList, deben leer los datos de forma asíncrona ( useEffect - useState ) /_/_/_/_/

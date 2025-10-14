@@ -9,7 +9,7 @@ function ItemCard({ product }) {
             </div>
             <div className="card-body">
                 <h3 className="prod-name">{product.title}</h3>
-                <h4 className="prod-price">{product.price}</h4>
+                <h4 className="prod-price">${product.price}</h4>
                 <Link to={`/detail/${product.id}`}>
                     <button>Ver Más</button>
                 </Link>
