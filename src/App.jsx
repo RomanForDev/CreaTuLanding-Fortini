@@ -7,6 +7,7 @@ import Contact from './components/Contact/Contact.jsx';
 import About from './components/About/About.jsx';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer.jsx';
 import ItemDetail from './components/ItemDetail/ItemDetail.jsx';
+import CartDetailContainer from './components/CartDetailContainer/CartDetailContainer.jsx';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/' element={ <MainRender greeting={"Bienvenidos!"}/> }/>
         <Route path='/detail/:id' element={ <ItemDetail /> }/>
         <Route path='*' element={ <h2>404: No pudimos encontrar tu solicitud.</h2> }/>
+        <Route path='/cart' element={ <CartDetailContainer /> }/>
     </Routes>
     </BrowserRouter>
   )
