@@ -38,6 +38,7 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  max-height: 10dvh;
 }
 
 .navlist {
@@ -123,4 +124,20 @@ button:focus-visible {
   flex-direction: row;
   justify-content: baseline;
   align-items: center;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 25rem;
+  padding-right: 25rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  gap: 12rem;
+}
+
+.img-about {
+  height: 150px;
+  width: 150px;
 }

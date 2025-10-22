@@ -29,6 +29,7 @@ function ItemDetail() {
                     <h4 className="prod-price-detail">${product.price}</h4>
                     <p className="prod-description-detail">{product.description}</p>
                     <button><Link to="/products">Volver</Link></button>
+                    <button>Agregar al carrito</button>
                 </div>
             </div>
         </div>
