@@ -141,3 +141,25 @@ button:focus-visible {
   height: 150px;
   width: 150px;
 }
+
+/*Render del footer*/
+
+.foot{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-height: 8dvh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.logo-git {
+  height: 50px;
+  width: 50px;
+  background-color: #ffffff;
+  border-radius: 100%;
+}
