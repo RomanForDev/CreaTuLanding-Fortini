@@ -146,35 +146,41 @@ button:focus-visible {
 }
 
 /*Render del footer*/
-.foot {
+/* .foot {
   position:initial;
   bottom: 0;
   background-color: #19242e;
   max-height: 8dvh;
   padding: 0.4rem;
-}
+} */
 
-.foot-son{
+.foot {
+  position:inherit;
+  bottom: 0;
+  overflow: hidden;
+  background-color: #19242e;
+  max-height: 6dvh;
+  padding: 0.4rem;
   max-width: 100dvw;
   background-color: #19242e;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items:center;
   margin-left: 3dvw;
   margin-right: 3dvw;
 }
 
 .link-git {
-  padding: 0;
-  justify-content: center;
+  max-width: 50px;
+  max-height: 50px;
+  background-color: #ffffff;
+  border-radius: 100%;
 }
+
 .logo-git {
   height: 50px;
   width: 50px;
-  background-color: #ffffff;
-  border-radius: 100%;
-  align-self: center;
 }
 
 /* .p-foot{
