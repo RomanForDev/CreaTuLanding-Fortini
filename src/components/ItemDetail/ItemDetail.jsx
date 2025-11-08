@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getSingleProduct } from "../../mockApiService/mockApiService";
+import { getSingleProduct } from "../../data/mockApiService";
 import { useParams } from "react-router";
 import { Link } from 'react-router';
 
