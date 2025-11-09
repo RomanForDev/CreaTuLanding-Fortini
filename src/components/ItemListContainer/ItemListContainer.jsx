@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { getData } from '../../data/mockApiService';
+// import { getData } from '../../data/mockApiService';
+import getData from '../../data/firestoreService';
 import ItemCard from '../ItemCard/ItemCard';
 import CategorySearch from '../CategorySearch/CategorySearch';
 
