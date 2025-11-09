@@ -43,10 +43,3 @@ export default getData;
   // appId: process.env.MI_APP_ID
 
 //////////
-
-  // apiKey: "AIzaSyBdzXCTdGcSX0Lmlhg-5hiApljey7JhvVA",
-  // authDomain: "project-8017622014560458420.firebaseapp.com",
-  // projectId: "project-8017622014560458420",
-  // storageBucket: "project-8017622014560458420.firebasestorage.app",
-  // messagingSenderId: "53728029617",
-  // appId: "1:53728029617:web:f38434e57ca0158c21eb90"
