@@ -1,14 +1,15 @@
 import { useState, useEffect } from "react";
-import { getSingleProduct } from "../../data/mockApiService";
+// import { getProductById } from "../../data/mockApiService";
+import { getProductById } from "../../data/firestoreService";
 import { useParams } from "react-router";
 import { Link } from 'react-router';
 
 function ItemDetail() {
-    const [product, setProduct] = useState(null);
+    const [product, setProduct] = useState({loading: true});
     const { id } = useParams()
 
     useEffect(() => {
-        getSingleProduct(id)
+        getProductById(id)
             .then((data) => {
                 setProduct(data);
             })

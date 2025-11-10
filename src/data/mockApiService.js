@@ -6,7 +6,7 @@ export async function getData(){
     }
 
 
-export async function getSingleProduct(id) {
+export async function getProductById(id) {
     const req = await fetch(`https://fakestoreapi.com/products/${id}`)
     const resp = await req.json();
     return resp

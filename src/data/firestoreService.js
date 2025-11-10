@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { getFirestore, collection, getDocs, doc, getDoc, query, where } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -43,3 +43,23 @@ export default getData;
   // appId: process.env.MI_APP_ID
 
 /////////////
+
+export async function getProductById( id ) {
+    const docRef = doc(db, "products", id)
+    const docSnapshot = await getDoc(docRef);
+    const docData = docSnapshot.data();
+    return {...docData, id: docData.id};
+}
+
+/////////////////////
+
+export async function getProductsByCategory( categParam ) {
+    const productsRef = collection(db, "products")
+    const q = query(productsRef, where("category", "==", categParam))
+    const productsSnapshot = await getDocs(q)
+    const docs = productsSnapshot.docs;
+    const dataDocs = docs.map(item => {
+      return { ...item.data(), id: item.id}
+    })
+    return dataDocs;
+}
