@@ -6,12 +6,12 @@ import { getFirestore, collection, getDocs, doc, getDoc, query, where } from "fi
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.MI_API_KEY,
-  authDomain: process.env.MI_AUTH_DOMAIN,
-  projectId: process.env.MI_PROYECT_ID,
-  storageBucket: process.env.MI_STORAGE_BUCKET,
-  messagingSenderId: process.env.MI_MESSAGING_SENDER_ID,
-  appId: process.env.MI_APP_ID
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROYECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID
 };
 
 // Initialize Firebase
@@ -33,15 +33,6 @@ async function getData() {
 
 export default getData;
 
-/////////////////
-
-  // apiKey: process.env.MI_API_KEY,
-  // authDomain: process.env.MI_AUTH_DOMAIN,
-  // projectId: process.env.MI_PROYECT_ID,
-  // storageBucket: process.env.MI_STORAGE_BUCKET,
-  // messagingSenderId: process.env.MI_MESSAGING_SENDER_ID,
-  // appId: process.env.MI_APP_ID
-
 /////////////
 
 export async function getProductById( id ) {
@@ -62,4 +53,10 @@ export async function getProductsByCategory( categParam ) {
       return { ...item.data(), id: item.id}
     })
     return dataDocs;
+}
+
+export async function createBuyOrder(orderData){
+  const ordersRef = collection(db, "orders")
+  const newDoc = await addDoc(ordersRef, orderData)
+  return newDoc;
 }

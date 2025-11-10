@@ -1,8 +1,8 @@
 Resta:
 
-- Funcionalidad del carrito.
+- Funcionalidad del carrito. (Añadir para eliminar y para limpiar el carro.)
 
-* Hacer que el fetch venga de firestore.
+* Corregir imágenes del fetch de Firestore.
 
 * Funcionalidad a la búsqueda por categoría.
 
