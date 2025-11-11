@@ -9,15 +9,18 @@ function ItemListContainer() {
     const [products, setProducts] = useState([]);
     const { catParam } = useParams();
 
+    // getData();
+
     useEffect(() => {
     if ( catParam ){
         getProductsByCategory(catParam)
-        .then(  (data) => setViajes(data))
+        .then(  (data) => setViajes(data), console.log("Categorías recibidas")
+        );
     }
     else {
-        console.log("No hay búsqueda por categorías.");
         getData()
             .then((data) => {
+                console.log("Datos recibidos");
                 setProducts(data);
             })
     }}, []);
