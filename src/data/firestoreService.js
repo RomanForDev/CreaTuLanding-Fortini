@@ -6,12 +6,12 @@ import { getFirestore, collection, getDocs, doc, getDoc, query, where } from "fi
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBdzXCTdGcSX0Lmlhg-5hiApljey7JhvVA",
-  authDomain: "project-8017622014560458420.firebaseapp.com",
-  projectId: "project-8017622014560458420",
-  storageBucket: "project-8017622014560458420.firebasestorage.app",
-  messagingSenderId: "53728029617",
-  appId: "1:53728029617:web:f38434e57ca0158c21eb90"
+  apiKey: import.meta.env.VITE_FS_APIKEY,
+  authDomain: import.meta.env.VITE_FS_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_FS_PROYECTID,
+  storageBucket: import.meta.env.VITE_FS_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_FS_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_FS_APPID
 };
 // Leak porque el env no funciona.
 // Initialize Firebase
@@ -61,9 +61,9 @@ export async function createBuyOrder(orderData){
   return newDoc;
 }
 
-  // apiKey: import.meta.env.VITE_API_KEY,
-  // authDomain: import.meta.env.VITE_AUTH_DOMAIN,
-  // projectId: import.meta.env.VITE_PROYECT_ID,
-  // storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
-  // messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
-  // appId: import.meta.env.VITE_APP_ID
+  // apiKey: import.meta.env.VITE_FS_APIKEY,
+  // authDomain: import.meta.env.VITE_FS_AUTHDOMAIN,
+  // projectId: import.meta.env.VITE_FS_PROYECTID,
+  // storageBucket: import.meta.env.VITE_FS_STORAGEBUCKET,
+  // messagingSenderId: import.meta.env.VITE_FS_MESSAGINGSENDERID,
+  // appId: import.meta.env.VITE_FS_APPID
