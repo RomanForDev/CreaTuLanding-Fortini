@@ -9,9 +9,11 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer.
 import ItemDetail from './components/ItemDetail/ItemDetail.jsx';
 import CartDetailContainer from './components/CartDetailContainer/CartDetailContainer.jsx';
 import Footer from './components/Footer/Footer.jsx';
+import {CartContextProvider} from './context/CartContext.jsx';
 
 function App() {
   return (
+    <CartContextProvider>
     <BrowserRouter>
     <NavBar />
       <p>Proyecto comisión 88080 Coderhouse.</p>
@@ -26,6 +28,7 @@ function App() {
     </Routes>
     <Footer/>
     </BrowserRouter>
+    </CartContextProvider>
   )
 }
 

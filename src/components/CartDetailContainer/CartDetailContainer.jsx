@@ -12,8 +12,8 @@
 // export default CartDetailContainerr;
 
 import { useContext, useState } from "react";
-import cartContext from "./src/context/CartContext/CartContext.jsx";
-import { createBuyOrder } from "../data/FirestoreService";
+import cartContext from "../../context/CartContext";
+import { createBuyOrder } from "../../data/firestoreService";
 import CheckoutForm from "./CheckoutForm";
 
 function CartDetailContainer(){
