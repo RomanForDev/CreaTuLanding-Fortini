@@ -26,7 +26,7 @@ function ItemListContainer() {
     }}, []);
 
     return ( <div>
-        <CategorySearch/>
+        <CategorySearch key={catParam}/>
         <div className="item-list-container">
             {products.map((product) => (
                 <ItemCard key={product.id} product={product} />

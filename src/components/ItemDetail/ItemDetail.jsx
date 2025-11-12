@@ -5,13 +5,14 @@ import { useParams } from "react-router";
 import { Link } from 'react-router';
 
 function ItemDetail() {
-    const [product, setProduct] = useState({loading: true});
+    const [product, setProduct] = useState({});
     const { id } = useParams()
 
     useEffect(() => {
         getProductById(id)
             .then((data) => {
                 setProduct(data);
+                console.log(data);
             })
     }, [id])
 

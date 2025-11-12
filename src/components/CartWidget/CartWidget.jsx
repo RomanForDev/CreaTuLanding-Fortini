@@ -8,7 +8,7 @@ function CartWidget() {
     return (<Link to="/cart">
         <img src="../src/assets/cart-img.png" className="img-cart" alt="img-cart"></img>
         {countItemsInCart()}
-        <span>0</span>
+        {/* <span>0</span> */}
     </Link> )
 }
 
