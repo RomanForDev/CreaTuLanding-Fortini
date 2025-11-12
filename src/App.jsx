@@ -19,6 +19,7 @@ function App() {
       <p>Proyecto comisión 88080 Coderhouse.</p>
     <Routes>
         <Route path='/products' element={ <ItemListContainer /> }/>
+        <Route path='/category/:catParam' element={ <ItemListContainer /> }/>
         <Route path='/contact' element={ <Contact greeting={'Contactanos!'}/> }/>
         <Route path='/about' element={ <About greeting={'Acerca de nosotros:'} /> }/>
         <Route path='/' element={ <MainRender greeting={"Bienvenidos!"}/> }/>

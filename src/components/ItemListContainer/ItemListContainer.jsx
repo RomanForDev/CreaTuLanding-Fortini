@@ -14,7 +14,7 @@ function ItemListContainer() {
     useEffect(() => {
     if ( catParam ){
         getProductsByCategory(catParam)
-        .then(  (data) => setViajes(data), console.log("Categorías recibidas")
+        .then(  (data) => setProducts(data), console.log("Categorías recibidas")
         );
     }
     else {
@@ -23,7 +23,7 @@ function ItemListContainer() {
                 console.log("Datos recibidos");
                 setProducts(data);
             })
-    }}, []);
+    }}, [catParam]);
 
     return ( <div>
         <CategorySearch key={catParam}/>
