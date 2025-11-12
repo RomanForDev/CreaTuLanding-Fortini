@@ -12,7 +12,7 @@
 // export default CartDetailContainerr;
 
 import { useContext, useState } from "react";
-import cartContext from "../../context/CartContext";
+import cartContext from "../../context/cartContext";
 import { createBuyOrder } from "../../data/firestoreService";
 import CheckoutForm from "./CheckoutForm";
 

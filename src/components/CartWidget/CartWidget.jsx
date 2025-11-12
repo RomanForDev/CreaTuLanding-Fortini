@@ -1,6 +1,6 @@
 // Página de muestra del ícono del carrito de compra. Se muestra en toda la página. Linkea al componente CartDetailContainer con el render del body.
 import { useContext } from "react";
-import cartContext from "../../context/CartContext";
+import cartContext from "../../context/cartContext";
 import { Link } from "react-router";
 
 function CartWidget() {
