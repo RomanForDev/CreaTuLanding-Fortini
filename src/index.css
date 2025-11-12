@@ -155,7 +155,6 @@ button:focus-visible {
 } */
 
 .foot {
-  position:inherit;
   bottom: 0;
   overflow: hidden;
   background-color: #19242e;
