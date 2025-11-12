@@ -9,7 +9,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer.
 import ItemDetail from './components/ItemDetail/ItemDetail.jsx';
 import CartDetailContainer from './components/CartDetailContainer/CartDetailContainer.jsx';
 import Footer from './components/Footer/Footer.jsx';
-import { CartContextProvider } from './context/CartContext.jsx';
+import { CartContextProvider } from './context/cartContext.jsx';
 
 function App() {
   return (
