@@ -7,6 +7,12 @@ Resta:
 * Diseño.
 * Readme.
 
-(./src/assets/react.svg)
+# E-Commerce en React.
 
-[Deploy en Vercel](https://crea-tu-landing-fortini.vercel.app/)
+=========================
+
+## Comisión 88080-Coderhouse.
+
+(/src/assets/react.svg)
+
+[Deploy en Netlify](react-88080.netlify.app)
