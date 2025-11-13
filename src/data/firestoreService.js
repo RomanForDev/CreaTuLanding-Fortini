@@ -39,7 +39,18 @@ export async function getProductById( id ) {
     const docRef = doc(db, "products", id)
     const docSnapshot = await getDoc(docRef);
     const docData = docSnapshot.data();
-    return {...docData, id: docData.id};
+    console.log(docData);
+    
+    const product = {
+      id: docSnapshot.id,
+      title: docData.title,
+      price: docData.price,
+      description: docData.description,
+      category: docData.category,
+      // image: docData.image, // Excluido temporalmente para evitar DataCloneError
+      // Agrega aquí cualquier otra propiedad necesaria que sea serializable
+    };
+    return product;
 }
 
 /////////////////////

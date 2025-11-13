@@ -7,7 +7,12 @@ export function CartContextProvider( { children }  ){
   // * CRUD -> create read update delete
   function addItem(item){    
     const newCartItems = structuredClone(cartItems)
-    newCartItems.push(item)
+    const itemIndex = newCartItems.findIndex( (prod) => prod.id === item.id )
+    if (itemIndex !== -1) {
+      newCartItems[itemIndex].quantity += item.quantity;
+    } else {
+      newCartItems.push(item);
+    }
     setCartItems(newCartItems)     
   }
 
