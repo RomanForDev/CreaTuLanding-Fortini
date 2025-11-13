@@ -1,8 +1,6 @@
 Resta:
 
-- Funcionalidad del carrito. (Añadir para eliminar y para limpiar el carro.)
-
-- Corregir Footer.
+- Funcionalidad del carrito. (Añadir para limpiar el carro.)
 
 * Diseño.
 * Readme.

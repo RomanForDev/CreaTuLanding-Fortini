@@ -62,8 +62,6 @@ function CartDetailContainer(){
         <div>
         Total de tu compra: ${getTotalPrice()}
         </div>
-
-        <CheckoutForm handleCheckout={handleCheckout}/>
                 
         
     </section>
