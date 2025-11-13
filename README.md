@@ -21,4 +21,4 @@ npm install
 
 ![Logo React](https://brandlogos.net/wp-content/uploads/2020/09/react-logo-512x512.png)
 
-# [Deploy en Netlify](react-88080.netlify.app)
+# [Deploy en Netlify](https://react-88080.netlify.app/)
