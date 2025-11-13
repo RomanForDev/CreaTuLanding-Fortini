@@ -10,8 +10,6 @@ Resta:
 
 ### Comisión 88080-Coderhouse.
 
-[Deploy en Netlify](react-88080.netlify.app)
-
 ===============================================
 How to install:
 
