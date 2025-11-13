@@ -61,9 +61,8 @@ function CartDetailContainer(){
         <hr/>
         <div>
         Total de tu compra: ${getTotalPrice()}
+        <button onClick={() => clearCart()}>Limpiar Carrito</button>
         </div>
-                
-        
     </section>
 }
 

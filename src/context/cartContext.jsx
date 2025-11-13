@@ -29,7 +29,7 @@ export function CartContextProvider( { children }  ){
   }
 
   function clearCart(){
-    console.log("Not implemented")
+    setCartItems([]);
   }
 
   function countItemsInCart(){

@@ -6,7 +6,7 @@ import { Link } from "react-router";
 function CartWidget() {
     const { countItemsInCart } = useContext(cartContext);
     return (<Link to="/cart">
-        <img src="../public/cart-img.png" className="img-cart" alt="img-cart"></img>
+        <img src="/cart-img.png" className="img-cart" alt="img-cart"></img>
         {countItemsInCart()}
         {/* <span>0</span> */}
     </Link> )
