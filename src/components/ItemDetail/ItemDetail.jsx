@@ -4,6 +4,7 @@ import { getProductById } from "../../data/firestoreService";
 import { useParams } from "react-router";
 import { Link } from 'react-router';
 import cartContext from "../../context/cartContext";
+import Swal from "sweetalert2";
 
 function ItemDetail() {
     const [product, setProduct] = useState({});
@@ -39,6 +40,13 @@ function ItemDetail() {
 
     function addToCart(){
     addItem( { ...product, quantity: count } )
+    Swal.fire({
+        position: "bottom-end",
+        icon: "success",
+        title: "Producto añadido al carrito!",
+        showConfirmButton: false,
+        timer: 1000
+    })
     }
 
     return (

@@ -15,6 +15,7 @@ import { useContext, useState, useEffect } from "react";
 import cartContext from "../../context/cartContext";
 import { createBuyOrder } from "../../data/firestoreService";
 import CheckoutForm from "./CheckoutForm";
+import Swal from "sweetalert2";
 
 function CartDetailContainer(){
     const { cart, clearCart, removeItem, getTotalPrice } = useContext(cartContext);
@@ -46,6 +47,13 @@ function CartDetailContainer(){
 
     function delToCart(item){
         removeItem(item.id)
+        Swal.fire({
+            position: "bottom-end",
+            icon: "success",
+            title: "Producto eliminado del carrito!",
+            showConfirmButton: false,
+            timer: 800
+        })
         }
 
     return <section>

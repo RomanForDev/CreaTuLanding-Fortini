@@ -1,9 +1,10 @@
 Resta:
 
-- Funcionalidad del carrito. (Añadir para limpiar el carro.)
+-Logo que envíe al path de inicio.
+-Confirmación de compra.
 
-* Diseño.
-* Readme.
+- Diseño. (Tailwind)
+- Readme.
 
 # E-Commerce en React.
 
