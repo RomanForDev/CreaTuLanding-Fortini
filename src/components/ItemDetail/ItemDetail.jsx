@@ -45,7 +45,7 @@ function ItemDetail() {
         <div className="product-detail">
             <div className="card-detail">
                 <div className="card-img-detail">
-                    <img src={product.image} alt={product.title} />
+                    <img src={"/" + product.image} alt={product.title} />
                 </div>
                 <div className="card-body-detail">
                     <h3 className="prod-name-detail">{product.title}</h3>

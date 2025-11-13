@@ -47,6 +47,7 @@ export async function getProductById( id ) {
       price: docData.price,
       description: docData.description,
       category: docData.category,
+      image: docData.image
     };
     return product;
 }

@@ -34,7 +34,8 @@ function CartDetailContainer(){
     setOrderCreated(response.id)
     clearCart();
     }
-
+    console.log(cart);
+    
 
     if(orderCreated){
         return <section>
@@ -52,7 +53,7 @@ function CartDetailContainer(){
         <div>
         { cart.map( item => <div key={item.id}>
             <h3>{item.title}</h3>
-            <img width="150" src={item.img}></img>
+            <img width="150" src={"/" + item.image}></img>
             <p>$ {item.price}</p>
             <p>Cantidad: {item.quantity}</p>
             <button onClick={() => delToCart(item)}>Eliminar</button>
