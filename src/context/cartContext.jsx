@@ -17,7 +17,15 @@ export function CartContextProvider( { children }  ){
   }
 
   function removeItem(id){
-    /* Eliminar el producto con ese ID del context */
+    const newCartItems = structuredClone(cartItems)
+    const itemIndex = newCartItems.findIndex( (prod) => prod.id === id )
+    if (itemIndex !== -1) {
+      newCartItems[itemIndex].quantity -= 1;
+      if (newCartItems[itemIndex].quantity === 0) {
+        newCartItems.splice(itemIndex, 1);
+      }
+    }
+    setCartItems(newCartItems)
   }
 
   function clearCart(){
@@ -32,14 +40,16 @@ export function CartContextProvider( { children }  ){
   }
 
   function getTotalPrice(){
-    // calcular el costo total de la compra
+    return cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
   }
 
+  
   return(
-    <cartContext.Provider value={ { cart: cartItems, addItem, removeItem, clearCart, countItemsInCart}}>
+    <cartContext.Provider value={ { cart: cartItems, addItem, removeItem, clearCart, countItemsInCart, getTotalPrice}}>
         { children }
     </cartContext.Provider>
   )
 }
 
 export default cartContext;
+

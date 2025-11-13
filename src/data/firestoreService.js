@@ -13,7 +13,7 @@ const firebaseConfig = {
   messagingSenderId: import.meta.env.VITE_FS_MESSAGINGSENDERID,
   appId: import.meta.env.VITE_FS_APPID
 };
-// Leak porque el env no funciona.
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
@@ -47,8 +47,6 @@ export async function getProductById( id ) {
       price: docData.price,
       description: docData.description,
       category: docData.category,
-      // image: docData.image, // Excluido temporalmente para evitar DataCloneError
-      // Agrega aquí cualquier otra propiedad necesaria que sea serializable
     };
     return product;
 }
@@ -72,9 +70,3 @@ export async function createBuyOrder(orderData){
   return newDoc;
 }
 
-  // apiKey: import.meta.env.VITE_FS_APIKEY,
-  // authDomain: import.meta.env.VITE_FS_AUTHDOMAIN,
-  // projectId: import.meta.env.VITE_FS_PROYECTID,
-  // storageBucket: import.meta.env.VITE_FS_STORAGEBUCKET,
-  // messagingSenderId: import.meta.env.VITE_FS_MESSAGINGSENDERID,
-  // appId: import.meta.env.VITE_FS_APPID

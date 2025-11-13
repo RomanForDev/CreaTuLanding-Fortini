@@ -11,14 +11,15 @@
 
 // export default CartDetailContainerr;
 
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import cartContext from "../../context/cartContext";
 import { createBuyOrder } from "../../data/firestoreService";
 import CheckoutForm from "./CheckoutForm";
 
 function CartDetailContainer(){
-    const { cart, clearCart } = useContext(cartContext);
+    const { cart, clearCart, removeItem, getTotalPrice } = useContext(cartContext);
     const [orderCreated, setOrderCreated] = useState(false);
+    // const { removeItem } = useContext(cartContext);
 
     async function handleCheckout(formData){
         const orderData= {
@@ -42,6 +43,10 @@ function CartDetailContainer(){
         </section>
     }
 
+    function delToCart(item){
+        removeItem(item.id)
+        }
+
     return <section>
         <h1>Tu carrito de compras</h1>
         <div>
@@ -50,12 +55,12 @@ function CartDetailContainer(){
             <img width="150" src={item.img}></img>
             <p>$ {item.price}</p>
             <p>Cantidad: {item.quantity}</p>
-            <button>Eliminar</button>
+            <button onClick={() => delToCart(item)}>Eliminar</button>
         </div>)}
         </div>
         <hr/>
         <div>
-        Total de tu compra: $999
+        Total de tu compra: ${getTotalPrice()}
         </div>
 
         <CheckoutForm handleCheckout={handleCheckout}/>
